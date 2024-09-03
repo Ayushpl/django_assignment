@@ -26,30 +26,41 @@ cd food-truck-api
 
 ```
 ### 3. Set Up a Virtual Environment
-Copy code
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Install PostgreSQL and PostGIS and create DB
+```bash
 brew install postgresql
 brew install postgis
 
 psql -c "CREATE DATABASE food_truck_db;"
 psql -d food_truck_db -c "CREATE EXTENSION postgis;"
+```
 
 
 ### 5. Apply Migrations 
+```bash
 python manage.py migrate
+```
 
 
 ### 6. Load Food Truck Data
+```bash
 python manage.py load_food_truck_data
+```
 
 ### 7. Run The development server
+```bash
 python manage.py runserver
+```
 
 
 API Endpoint
@@ -59,5 +70,5 @@ Method: GET
 
 Parameters:
 
-latitude: The latitude of your current location.
-longitude: The longitude of your current location.
+* latitude: The latitude of your current location.
+* longitude: The longitude of your current location.

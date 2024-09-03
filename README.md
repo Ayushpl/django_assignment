@@ -24,19 +24,16 @@ This Django-based API helps users discover nearby food trucks in San Francisco b
 git clone https://github.com/your-username/food-truck-api.git
 cd food-truck-api
 
-### 2. Set Up a Virtual Environment
-
-bash
+```
+### 3. Set Up a Virtual Environment
 Copy code
 python3 -m venv venv
 source venv/bin/activate
 
 ### 3. Install Dependencies
-
 pip install -r requirements.txt
 
-### 4. 
-
+### 4. Install PostgreSQL and PostGIS and create DB
 brew install postgresql
 brew install postgis
 
@@ -45,14 +42,13 @@ psql -d food_truck_db -c "CREATE EXTENSION postgis;"
 
 
 ### 5. Apply Migrations 
-
 python manage.py migrate
 
 
 ### 6. Load Food Truck Data
+python manage.py load_food_truck_data
 
 ### 7. Run The development server
-
 python manage.py runserver
 
 

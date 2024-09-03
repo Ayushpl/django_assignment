@@ -63,12 +63,14 @@ python manage.py runserver
 ```
 
 
-API Endpoint
-Get Nearby Food Trucks
-Endpoint: /api/nearby-food-trucks/
-Method: GET
+## API Endpoint
 
-Parameters:
+### Get Nearby Food Trucks
 
-* latitude: The latitude of your current location.
-* longitude: The longitude of your current location.
+- **Endpoint**: `/api/nearby-food-trucks/`
+- **Method**: `GET`
+
+**Parameters**:
+
+- `latitude`: The latitude of your current location.
+- `longitude`: The longitude of your current location.
